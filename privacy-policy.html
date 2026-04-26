@@ -100,11 +100,10 @@
   .logo-mark {
     width: 34px; height: 34px;
     border-radius: 10px;
-    background: linear-gradient(135deg, var(--splash-start), var(--splash-end));
+    background: transparent;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,114,255,0.3);
   }
-  .logo-mark svg { width: 18px; height: 18px; }
+  .logo-mark svg { width: 34px; height: 34px; }
   .nav-right { margin-left: auto; display: flex; align-items: center; gap: 6px; }
   .nav-link {
     font-size: 13px;
@@ -146,6 +145,13 @@
     width: 160px; height: 160px;
     border-radius: 50%;
     background: rgba(255,255,255,0.06);
+  }
+
+  .hero-logo {
+    width: 72px; height: 72px;
+    margin: 0 auto 20px;
+    display: block;
+    filter: drop-shadow(0 6px 18px rgba(0,0,0,0.22));
   }
   .hero-chip {
     display: inline-flex;
@@ -377,10 +383,30 @@
 <nav>
   <a class="nav-logo" href="#">
     <div class="logo-mark">
-      <svg viewBox="0 0 18 18" fill="none">
-        <circle cx="9" cy="9" r="7" stroke="white" stroke-width="2"/>
-        <path d="M6 9l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <svg viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lg-pp" x1="22" y1="22" x2="86" y2="86" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#818CF8"/>
+      <stop offset="0.5" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+    <radialGradient id="rg-pp" cx="42" cy="42" r="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.19"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Glow -->
+  <circle cx="54" cy="56" r="34" fill="#60A5FA" fill-opacity="0.1"/>
+  <!-- Main circle -->
+  <circle cx="54" cy="54" r="32" fill="url(#lg-pp)"/>
+  <!-- Inner highlight -->
+  <circle cx="54" cy="54" r="28" fill="url(#rg-pp)"/>
+  <!-- Back checkmark (60% white) -->
+  <path d="M48,58L39,49C38.1,48.1 38.1,46.6 39,45.7C39.9,44.8 41.4,44.8 42.3,45.7L49.7,53.1L66.7,36.1C67.6,35.2 69.1,35.2 70,36.1C70.9,37 70.9,38.5 70,39.4L51.3,58C50.4,58.9 48.9,58.9 48,58Z" fill="#ffffff" fill-opacity="0.6"/>
+  <!-- Front checkmark (full white) -->
+  <path d="M48,72L39,63C38.1,62.1 38.1,60.6 39,59.7C39.9,58.8 41.4,58.8 42.3,59.7L49.7,67.1L66.7,50.1C67.6,49.2 69.1,49.2 70,50.1C70.9,51 70.9,52.5 70,53.4L51.3,72C50.4,72.9 48.9,72.9 48,72Z" fill="#ffffff"/>
+</svg>
     </div>
     Routinic
   </a>
@@ -392,6 +418,25 @@
 
 <!-- HERO -->
 <div class="hero">
+  <svg class="hero-logo" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="hlg-pp2" x1="22" y1="22" x2="86" y2="86" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#818CF8"/>
+        <stop offset="0.5" stop-color="#6366F1"/>
+        <stop offset="1" stop-color="#4F46E5"/>
+      </linearGradient>
+      <radialGradient id="hrg-pp2" cx="42" cy="42" r="40" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+        <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.07"/>
+        <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <circle cx="54" cy="56" r="34" fill="#60A5FA" fill-opacity="0.15"/>
+    <circle cx="54" cy="54" r="32" fill="url(#hlg-pp2)"/>
+    <circle cx="54" cy="54" r="28" fill="url(#hrg-pp2)"/>
+    <path d="M48,58L39,49C38.1,48.1 38.1,46.6 39,45.7C39.9,44.8 41.4,44.8 42.3,45.7L49.7,53.1L66.7,36.1C67.6,35.2 69.1,35.2 70,36.1C70.9,37 70.9,38.5 70,39.4L51.3,58C50.4,58.9 48.9,58.9 48,58Z" fill="#ffffff" fill-opacity="0.55"/>
+    <path d="M48,72L39,63C38.1,62.1 38.1,60.6 39,59.7C39.9,58.8 41.4,58.8 42.3,59.7L49.7,67.1L66.7,50.1C67.6,49.2 69.1,49.2 70,50.1C70.9,51 70.9,52.5 70,53.4L51.3,72C50.4,72.9 48.9,72.9 48,72Z" fill="#ffffff"/>
+  </svg>
   <div class="hero-chip">&#9679;&nbsp; Legal</div>
   <h1>Privacy Policy</h1>
   <p class="hero-sub">Effective April 26, 2026 &nbsp;&middot;&nbsp; Routinic for Android</p>
