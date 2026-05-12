@@ -3,257 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Use · Routinic</title>
+<title>Terms of Use — Routinic</title>
+<meta name="description" content="Terms of Use for Routinic, a privacy-first daily habit tracker for Android.">
 <style>
   :root {
-    --splash-start:   #00c6ff;
-    --splash-end:     #0072ff;
-    --purple:         #8380FF;
-    --primary:        #128C7E;
-    --primary-light:  #DCF8C6;
-    --primary-dark:   #075E54;
-    --secondary:      #25D366;
-    --secondary-lt:   #D7F5ED;
-    --tertiary:       #E6A700;
-    --tertiary-lt:    #FFF3D0;
-    --bg:             #FFFFFF;
-    --surface-var:    #F5F6F6;
-    --container:      #F0F2F5;
-    --outline:        #D1D5DB;
-    --text:           #1A1A1A;
-    --text-sec:       #5E5E5E;
-    --error:          #DC3545;
-    --done:           #2ECC71;
-    --skip:           #F39C12;
-    --undo:           #E74C3C;
-    --completed:      #307473;
-    --teal:           #26A69A;
-    --amber:          #FFB74D;
-    --pink:           #EC407A;
-    --sky:            #29B6F6;
-    --grey:           #889AA6;
-    --sky-lt:         #A0D2F4;
-    --lavender-lt:    #D4DAFF;
-    --peachy-lt:      #FFE6DE;
-    --radius-lg: 20px;
-    --radius-md: 14px;
-    --radius-sm: 8px;
+    --bg:         #0F0F13;
+    --surface:    #17171E;
+    --surface-2:  #1E1E28;
+    --border:     #2A2A38;
+    --text:       #F1F0FF;
+    --text-sec:   #9E9CB8;
+    --text-muted: #5E5C78;
+    --brand:      #818CF8;
+    --brand-dk:   #6366F1;
+    --brand-lt:   #1E1E38;
+    --green:      #34D399;
+    --green-lt:   #0D2A1F;
+    --amber:      #FBBF24;
+    --amber-lt:   #2A1F0A;
+    --red:        #F87171;
+    --red-lt:     #2A0F0F;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--container); color: var(--text); font-size: 15px; line-height: 1.75; }
 
-  nav { background: var(--bg); border-bottom: 1px solid var(--outline); padding: 0 28px; display: flex; align-items: center; height: 58px; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-  .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; color: var(--primary); text-decoration: none; }
-  .logo-mark { width: 34px; height: 34px; border-radius: 10px; background: transparent; display: flex; align-items: center; justify-content: center; }
-  .logo-mark svg { width: 18px; height: 18px; }
-  .nav-right { margin-left: auto; display: flex; align-items: center; gap: 6px; }
-  .nav-link { font-size: 13px; color: var(--text-sec); text-decoration: none; padding: 6px 14px; border-radius: var(--radius-sm); transition: all .15s; font-weight: 500; }
-  .nav-link:hover { background: var(--primary-light); color: var(--primary-dark); }
-  .nav-link.active { background: var(--primary-light); color: var(--primary-dark); font-weight: 600; }
-
-  /* Different hero gradient for Terms — uses app's peachy/pink palette */
-  .hero {
-    background: linear-gradient(135deg, #F26076 0%, #FF8C42 100%);
-    padding: 60px 24px 52px;
-    text-align: center;
-    color: white;
-    position: relative;
-    overflow: hidden;
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.8;
+    min-height: 100vh;
   }
-  .hero::before { content: ""; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.08); }
-  .hero::after  { content: ""; position: absolute; bottom: -60px; left: -20px; width: 160px; height: 160px; border-radius: 50%; background: rgba(255,255,255,0.06); }
 
-  .hero-logo {
-    width: 72px; height: 72px;
-    margin: 0 auto 20px;
-    display: block;
-    filter: drop-shadow(0 6px 18px rgba(0,0,0,0.22));
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 0 48px;
+    height: 64px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
-  .hero-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.2); color: white; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 5px 14px; border-radius: 99px; margin-bottom: 16px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.25); }
-  .hero h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: 10px; }
-  .hero-sub { font-size: 14px; opacity: .8; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-svg { width: 32px; height: 32px; flex-shrink: 0; }
+  .logo-text { font-size: 17px; font-weight: 700; color: var(--text); letter-spacing: -.01em; }
+  .nav-right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
 
-  .wrap { max-width: 700px; margin: 0 auto; padding: 40px 20px 72px; }
+  .btn-store {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all .2s;
+  }
+  .btn-store:hover { background: var(--brand-lt); border-color: var(--brand); color: var(--brand); }
+  .btn-store svg { width: 16px; height: 16px; flex-shrink: 0; }
 
-  .jump-nav { background: var(--bg); border-radius: var(--radius-lg); border: 1px solid var(--outline); padding: 20px 22px; margin-bottom: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
-  .jump-title { font-size: 10.5px; font-weight: 700; color: var(--grey); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 12px; }
-  .jump-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(185px, 1fr)); gap: 2px 12px; }
-  .jump-nav a { font-size: 13px; color: var(--primary); text-decoration: none; padding: 4px 0; display: flex; align-items: center; gap: 7px; transition: gap .15s; }
-  .jump-nav a span { font-size: 11px; color: #F26076; font-weight: 600; }
-  .jump-nav a:hover { gap: 11px; }
+  .page { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
 
-  .card { background: var(--bg); border-radius: var(--radius-lg); border: 1px solid var(--outline); padding: 26px 28px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); scroll-margin-top: 74px; }
+  .page-header { margin-bottom: 48px; }
+  .page-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -.03em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .page-meta { font-size: 14px; color: var(--text-muted); }
 
-  .s-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--container); }
-  .s-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .s-icon svg { width: 21px; height: 21px; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .intro {
+    color: var(--text-sec);
+    font-size: 15.5px;
+    line-height: 1.8;
+    margin-bottom: 52px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+  }
+  .intro a { color: var(--brand); text-decoration: none; }
+  .intro a:hover { text-decoration: underline; }
 
-  .ic-blue   { background: #E0F4FF; } .ic-blue svg   { stroke: var(--splash-end); }
-  .ic-teal   { background: #E0F5F3; } .ic-teal svg   { stroke: var(--teal); }
-  .ic-green  { background: #E8FAF0; } .ic-green svg  { stroke: var(--done); }
-  .ic-amber  { background: #FFF4E0; } .ic-amber svg  { stroke: var(--tertiary); }
-  .ic-pink   { background: var(--peachy-lt); } .ic-pink svg { stroke: #F26076; }
-  .ic-purple { background: var(--lavender-lt); } .ic-purple svg { stroke: var(--purple); }
-  .ic-red    { background: #FDEAEA; } .ic-red svg    { stroke: var(--error); }
-  .ic-sky    { background: #E6F6FF; } .ic-sky svg    { stroke: var(--sky); }
+  .section { margin-bottom: 44px; padding-bottom: 44px; border-bottom: 1px solid var(--border); }
+  .section:last-of-type { border-bottom: none; }
 
-  .s-label { font-size: .95rem; font-weight: 700; color: var(--text); }
-  .s-num   { font-size: 12px; color: var(--grey); margin-top: 1px; }
+  .section h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section h2::before {
+    content: "";
+    width: 3px;
+    height: 20px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
 
-  p { color: var(--text-sec); margin-bottom: 12px; font-size: 14.5px; }
+  p { color: var(--text-sec); font-size: 15px; margin-bottom: 14px; line-height: 1.8; }
   p:last-child { margin-bottom: 0; }
   strong { color: var(--text); font-weight: 600; }
-  a { color: var(--primary); text-decoration: none; }
+  a { color: var(--brand); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  .list { list-style: none; padding: 0; margin: 10px 0; }
-  .list li { display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--surface-var); font-size: 14px; color: var(--text-sec); line-height: 1.6; align-items: flex-start; }
-  .list li:last-child { border-bottom: none; }
-  .list li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #F26076; flex-shrink: 0; margin-top: 8px; }
+  ul { list-style: none; padding: 0; margin: 12px 0; }
+  ul li {
+    display: flex;
+    gap: 12px;
+    padding: 8px 0;
+    color: var(--text-sec);
+    font-size: 15px;
+    line-height: 1.7;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+  }
+  ul li:first-child { border-top: 1px solid var(--border); }
+  ul li::before { content: "–"; color: var(--brand); flex-shrink: 0; font-weight: 600; margin-top: 1px; }
 
-  .callout { border-radius: var(--radius-md); padding: 14px 16px; margin: 14px 0; display: flex; gap: 12px; align-items: flex-start; }
-  .c-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
-  .callout p { margin: 0; font-size: 13.5px; line-height: 1.65; }
+  .callout { border-radius: 10px; padding: 14px 18px; margin: 16px 0; border-left: 3px solid; }
+  .callout p { margin: 0; font-size: 14px; line-height: 1.7; }
+  .callout-green { background: var(--green-lt); border-color: var(--green); }
+  .callout-green p { color: #A7F3D0; }
+  .callout-amber { background: var(--amber-lt); border-color: var(--amber); }
+  .callout-amber p { color: #FDE68A; }
+  .callout-red { background: var(--red-lt); border-color: var(--red); }
+  .callout-red p { color: #FCA5A5; }
 
-  .c-green  { background: #EDFAF3; border-left: 3px solid var(--done); }
-  .c-green .c-dot { background: var(--done); }
-  .c-green p { color: #1A5C38; }
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .contact-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--brand-lt); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .contact-icon svg { width: 20px; height: 20px; fill: none; stroke: var(--brand); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .contact-email { font-size: 15px; font-weight: 600; color: var(--text); }
+  .contact-sub { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
 
-  .c-amber  { background: var(--tertiary-lt); border-left: 3px solid var(--tertiary); }
-  .c-amber .c-dot { background: var(--tertiary); }
-  .c-amber p { color: #6B4400; }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  footer a { color: var(--text-muted); text-decoration: none; }
+  footer a:hover { color: var(--brand); }
+  .footer-links { display: flex; gap: 24px; }
 
-  .c-red    { background: #FDEAEA; border-left: 3px solid var(--error); }
-  .c-red .c-dot { background: var(--error); }
-  .c-red p { color: #7A0D1A; }
-
-  .c-blue   { background: #E0F4FF; border-left: 3px solid var(--splash-end); }
-  .c-blue .c-dot { background: var(--splash-end); }
-  .c-blue p { color: #003A7A; }
-
-  .contact-card { background: linear-gradient(135deg, #FFF5F6, var(--peachy-lt)); border: 1px solid #F5C6CE; border-radius: var(--radius-md); padding: 20px 22px; display: flex; gap: 16px; align-items: center; margin-top: 14px; }
-  .c-avatar { width: 48px; height: 48px; background: linear-gradient(135deg, #F26076, #FF8C42); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 3px 10px rgba(242,96,118,0.3); }
-  .c-avatar svg { width: 22px; height: 22px; fill: none; stroke: white; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-  .c-name { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
-  .c-sub  { font-size: 13px; color: var(--text-sec); margin-bottom: 0; }
-  .c-note { font-size: 12px; color: var(--grey); font-style: italic; margin-top: 5px; margin-bottom: 0; }
-
-  .footer { text-align: center; padding: 20px 0 40px; font-size: 12.5px; color: var(--grey); }
-  .footer a { color: var(--primary); }
-  .footer a:hover { text-decoration: underline; }
-
-  @media (max-width: 600px) {
-    .hero h1 { font-size: 1.75rem; }
-    .hero { padding: 44px 20px 40px; }
-    .card { padding: 20px 18px; }
-    nav { padding: 0 16px; }
-    .nav-link { display: none; }
-    .nav-link.active { display: block; }
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .page { padding: 40px 20px 72px; }
+    .page-header h1 { font-size: 1.7rem; }
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 24px 20px; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
   }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">
-    <div class="logo-mark">
-      <svg viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="lg-tou" x1="22" y1="22" x2="86" y2="86" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#818CF8"/>
-      <stop offset="0.5" stop-color="#6366F1"/>
-      <stop offset="1" stop-color="#4F46E5"/>
-    </linearGradient>
-    <radialGradient id="rg-tou" cx="42" cy="42" r="40" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.19"/>
-      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.06"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <circle cx="54" cy="56" r="34" fill="#60A5FA" fill-opacity="0.1"/>
-  <circle cx="54" cy="54" r="32" fill="url(#lg-tou)"/>
-  <circle cx="54" cy="54" r="28" fill="url(#rg-tou)"/>
-  <path d="M48,58L39,49C38.1,48.1 38.1,46.6 39,45.7C39.9,44.8 41.4,44.8 42.3,45.7L49.7,53.1L66.7,36.1C67.6,35.2 69.1,35.2 70,36.1C70.9,37 70.9,38.5 70,39.4L51.3,58C50.4,58.9 48.9,58.9 48,58Z" fill="#ffffff" fill-opacity="0.6"/>
-  <path d="M48,72L39,63C38.1,62.1 38.1,60.6 39,59.7C39.9,58.8 41.4,58.8 42.3,59.7L49.7,67.1L66.7,50.1C67.6,49.2 69.1,49.2 70,50.1C70.9,51 70.9,52.5 70,53.4L51.3,72C50.4,72.9 48.9,72.9 48,72Z" fill="#ffffff"/>
-</svg>
-    </div>
-    Routinic
+    <svg class="logo-svg" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lg-tou" x1="22" y1="22" x2="86" y2="86" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#818CF8"/>
+          <stop offset="0.5" stop-color="#6366F1"/>
+          <stop offset="1" stop-color="#4F46E5"/>
+        </linearGradient>
+        <radialGradient id="rg-tou" cx="42" cy="42" r="40" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#fff" stop-opacity=".2"/>
+          <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="54" cy="56" r="34" fill="#60A5FA" fill-opacity=".12"/>
+      <circle cx="54" cy="54" r="32" fill="url(#lg-tou)"/>
+      <circle cx="54" cy="54" r="28" fill="url(#rg-tou)"/>
+      <path d="M48,58L39,49C38.1,48.1 38.1,46.6 39,45.7C39.9,44.8 41.4,44.8 42.3,45.7L49.7,53.1L66.7,36.1C67.6,35.2 69.1,35.2 70,36.1C70.9,37 70.9,38.5 70,39.4L51.3,58C50.4,58.9 48.9,58.9 48,58Z" fill="#fff" fill-opacity=".55"/>
+      <path d="M48,72L39,63C38.1,62.1 38.1,60.6 39,59.7C39.9,58.8 41.4,58.8 42.3,59.7L49.7,67.1L66.7,50.1C67.6,49.2 69.1,49.2 70,50.1C70.9,51 70.9,52.5 70,53.4L51.3,72C50.4,72.9 48.9,72.9 48,72Z" fill="#fff"/>
+    </svg>
+    <span class="logo-text">Routinic</span>
   </a>
   <div class="nav-right">
-    <a class="nav-link" href="privacy-policy.html">Privacy Policy</a>
-    <a class="nav-link active" href="terms-of-use.html">Terms of Use</a>
+    <a class="btn-store" href="YOUR_PLAY_STORE_LINK" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3.18 23.76c.37.21.8.22 1.18.04l12.93-7.47-2.79-2.79L3.18 23.76zm-1.47-20.2C1.27 3.9 1 4.36 1 4.93v14.14c0 .57.27 1.03.71 1.37l.08.06 7.93-7.92v-.19L1.71 3.56l-.07.06.07-.06zM20.49 10.7l-2.55-1.47-3.12 3.12 3.12 3.12 2.57-1.48c.73-.42.73-1.87-.02-2.29zM4.36.24L17.3 7.71 14.5 10.5 3.54.22C3.93.03 4.38.03 4.36.24z"/>
+      </svg>
+      Play Store
+    </a>
   </div>
 </nav>
 
-<div class="hero">
-  <svg class="hero-logo" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="hlg-tou2" x1="22" y1="22" x2="86" y2="86" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#818CF8"/>
-        <stop offset="0.5" stop-color="#6366F1"/>
-        <stop offset="1" stop-color="#4F46E5"/>
-      </linearGradient>
-      <radialGradient id="hrg-tou2" cx="42" cy="42" r="40" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
-        <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.07"/>
-        <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-      </radialGradient>
-    </defs>
-    <circle cx="54" cy="56" r="34" fill="#60A5FA" fill-opacity="0.15"/>
-    <circle cx="54" cy="54" r="32" fill="url(#hlg-tou2)"/>
-    <circle cx="54" cy="54" r="28" fill="url(#hrg-tou2)"/>
-    <path d="M48,58L39,49C38.1,48.1 38.1,46.6 39,45.7C39.9,44.8 41.4,44.8 42.3,45.7L49.7,53.1L66.7,36.1C67.6,35.2 69.1,35.2 70,36.1C70.9,37 70.9,38.5 70,39.4L51.3,58C50.4,58.9 48.9,58.9 48,58Z" fill="#ffffff" fill-opacity="0.55"/>
-    <path d="M48,72L39,63C38.1,62.1 38.1,60.6 39,59.7C39.9,58.8 41.4,58.8 42.3,59.7L49.7,67.1L66.7,50.1C67.6,49.2 69.1,49.2 70,50.1C70.9,51 70.9,52.5 70,53.4L51.3,72C50.4,72.9 48.9,72.9 48,72Z" fill="#ffffff"/>
-  </svg>
-  <div class="hero-chip">&#9679;&nbsp; Legal</div>
-  <h1>Terms of Use</h1>
-  <p class="hero-sub">Effective April 26, 2026 &nbsp;&middot;&nbsp; Routinic for Android</p>
-</div>
+<!-- PAGE -->
+<div class="page">
 
-<div class="wrap">
-
-  <div class="jump-nav">
-    <div class="jump-title">Jump to section</div>
-    <div class="jump-grid">
-      <a href="#acceptance"><span>01</span> Acceptance of Terms</a>
-      <a href="#description"><span>02</span> Description of Service</a>
-      <a href="#ads"><span>03</span> Free to Use &amp; Ads</a>
-      <a href="#responsibilities"><span>04</span> User Responsibilities</a>
-      <a href="#data"><span>05</span> Data &amp; Privacy</a>
-      <a href="#reminders"><span>06</span> Reminders &amp; Alarms</a>
-      <a href="#ip"><span>07</span> Intellectual Property</a>
-      <a href="#health"><span>08</span> Health Disclaimer</a>
-      <a href="#warranties"><span>09</span> Disclaimer of Warranties</a>
-      <a href="#liability"><span>10</span> Limitation of Liability</a>
-      <a href="#updates"><span>11</span> App Updates</a>
-      <a href="#termination"><span>12</span> Termination</a>
-      <a href="#changes"><span>13</span> Changes to Terms</a>
-      <a href="#law"><span>14</span> Governing Law</a>
-      <a href="#contact"><span>15</span> Contact</a>
-    </div>
+  <div class="page-header">
+    <h1>Terms of Use</h1>
+    <p class="page-meta">Last Updated: April 26, 2026</p>
   </div>
 
-  <p style="margin-bottom:24px;">By downloading, installing, or using Routinic, you agree to these Terms of Use and our <a href="privacy-policy.html">Privacy Policy</a>. Please read them carefully. If you do not agree, please do not use the app.</p>
+  <p class="intro">
+    Welcome to Routinic. By downloading, installing, or using Routinic, you agree to be bound by these Terms of Use and our <a href="privacy-policy.html">Privacy Policy</a>. Please read them carefully. If you do not agree to these terms, please do not download or use the app.
+  </p>
 
   <!-- 1 -->
-  <div class="card" id="acceptance">
-    <div class="s-head">
-      <div class="s-icon ic-blue"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
-      <div><div class="s-label">Acceptance of Terms</div><div class="s-num">Section 01</div></div>
-    </div>
+  <div class="section">
+    <h2>1. Acceptance of Terms</h2>
     <p>By accessing or using Routinic — including downloading it from the Google Play Store, installing it, or using any of its features — you confirm that you have read, understood, and agree to these Terms of Use and our <a href="privacy-policy.html">Privacy Policy</a>. If you are using the app on behalf of someone else or an organisation, you confirm you have authority to bind them to these terms.</p>
   </div>
 
   <!-- 2 -->
-  <div class="card" id="description">
-    <div class="s-head">
-      <div class="s-icon ic-teal"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      <div><div class="s-label">Description of Service</div><div class="s-num">Section 02</div></div>
-    </div>
+  <div class="section">
+    <h2>2. Description of Service</h2>
     <p>Routinic is an Android habit tracker that helps you build and maintain positive daily routines. The app provides:</p>
-    <ul class="list">
+    <ul>
       <li>Create and manage daily, weekly, monthly, and one-time habits using custom settings or pre-built templates</li>
       <li>Track habit completion, build streaks, and earn Awesome Days</li>
       <li>View progress through bar-chart analytics, a monthly calendar heatmap, and per-habit statistics</li>
@@ -266,17 +251,13 @@
   </div>
 
   <!-- 3 -->
-  <div class="card" id="ads">
-    <div class="s-head">
-      <div class="s-icon ic-amber"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-      <div><div class="s-label">Free to Use &amp; Advertisements</div><div class="s-num">Section 03</div></div>
-    </div>
+  <div class="section">
+    <h2>3. Free to Use &amp; Advertisements</h2>
     <p>Routinic is free to download and use. To support ongoing development, the app displays advertisements served by <strong>Google AdMob</strong>.</p>
-    <div class="callout c-amber">
-      <div class="c-dot"></div>
+    <div class="callout callout-amber">
       <p><strong>Ad consent at first launch.</strong> When you first open Routinic, Google's User Messaging Platform (UMP) will ask for your consent to personalised advertising. You may accept or decline. To change your choice later, go to your Android Google account settings under <strong>Ads &amp; data</strong>, or reinstall the app to see the prompt again.</p>
     </div>
-    <ul class="list">
+    <ul>
       <li>By using Routinic, you agree that advertisements may be displayed within the app.</li>
       <li>We aim to show ads in a non-intrusive manner that does not interfere with core features.</li>
       <li>Ad content is determined by Google AdMob and is outside our direct control. We are not responsible for the content of third-party advertisements.</li>
@@ -285,13 +266,10 @@
   </div>
 
   <!-- 4 -->
-  <div class="card" id="responsibilities">
-    <div class="s-head">
-      <div class="s-icon ic-purple"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg></div>
-      <div><div class="s-label">User Responsibilities</div><div class="s-num">Section 04</div></div>
-    </div>
+  <div class="section">
+    <h2>4. User Responsibilities</h2>
     <p>When using Routinic, you agree to:</p>
-    <ul class="list">
+    <ul>
       <li>Use the app only for lawful personal purposes</li>
       <li>Not attempt to reverse engineer, decompile, or modify the app or its source code</li>
       <li>Not interfere with, disrupt, or bypass any feature or security measure of the app</li>
@@ -301,31 +279,25 @@
   </div>
 
   <!-- 5 -->
-  <div class="card" id="data">
-    <div class="s-head">
-      <div class="s-icon ic-green"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <div><div class="s-label">Data &amp; Privacy</div><div class="s-num">Section 05</div></div>
+  <div class="section">
+    <h2>5. Data &amp; Privacy</h2>
+    <div class="callout callout-green">
+      <p><strong>Your data stays on your device.</strong> All habit data, streaks, statistics, and settings are stored locally using an offline database. Routinic does not collect, transmit, or store your personal habit data on any server. We cannot access or recover it.</p>
     </div>
-    <div class="callout c-green">
-      <div class="c-dot"></div>
-      <p><strong>Your data stays on your device.</strong> All habit data, streaks, statistics, and settings are stored locally using an offline database. Routinic does not collect, transmit, or store your data on any server. We cannot access or recover it.</p>
-    </div>
-    <ul class="list">
+    <ul>
       <li><strong>Data loss risk:</strong> If you uninstall Routinic, reset your device, or clear app data, your habit history is permanently deleted. We cannot recover it for you.</li>
       <li><strong>No account required:</strong> Your use of Routinic is entirely local to your device.</li>
       <li><strong>Backup recommended:</strong> Enable Android's device backup to protect against accidental loss.</li>
+      <li><strong>Firebase services:</strong> We use Firebase Crashlytics and Firebase Analytics to collect anonymous crash reports and usage data to improve the app. This data does not include your personal habit data.</li>
     </ul>
     <p>For full details on data handling, see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
   </div>
 
   <!-- 6 -->
-  <div class="card" id="reminders">
-    <div class="s-head">
-      <div class="s-icon ic-sky"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg></div>
-      <div><div class="s-label">Reminders &amp; Notifications</div><div class="s-num">Section 06</div></div>
-    </div>
-    <p>Routinic uses Android's exact alarm system to deliver habit reminders. By setting reminders, you grant Routinic permission to schedule and deliver local notifications on your device.</p>
-    <ul class="list">
+  <div class="section">
+    <h2>6. Reminders &amp; Notifications</h2>
+    <p>Routinic uses Android's exact alarm system to deliver habit reminders at the times you configure. By setting reminders, you grant Routinic permission to schedule and deliver local notifications on your device.</p>
+    <ul>
       <li>Reminders are delivered locally and do not require an internet connection.</li>
       <li>Disable reminders anytime in Android Settings → Apps → Routinic → Notifications.</li>
       <li>Routinic reschedules your reminders automatically after your device restarts.</li>
@@ -334,35 +306,25 @@
   </div>
 
   <!-- 7 -->
-  <div class="card" id="ip">
-    <div class="s-head">
-      <div class="s-icon ic-pink"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-      <div><div class="s-label">Intellectual Property</div><div class="s-num">Section 07</div></div>
-    </div>
+  <div class="section">
+    <h2>7. Intellectual Property</h2>
     <p>Routinic — including its name, logo, design, source code, user interface, habit templates, icons, and all original content — is the intellectual property of Routinic and is protected by applicable copyright, trademark, and intellectual property laws.</p>
-    <p>You are granted a limited, non-exclusive, non-transferable, revocable licence to use Routinic on your Android device for personal, non-commercial purposes in accordance with these Terms. You may not copy, reproduce, distribute, or create derivative works from Routinic without prior written permission.</p>
+    <p>You are granted a limited, non-exclusive, non-transferable, revocable licence to use Routinic on your Android device for personal, non-commercial purposes. You may not copy, reproduce, distribute, or create derivative works from Routinic without prior written permission.</p>
   </div>
 
   <!-- 8 -->
-  <div class="card" id="health">
-    <div class="s-head">
-      <div class="s-icon ic-red"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4M12 17h.01"/></svg></div>
-      <div><div class="s-label">Health Disclaimer</div><div class="s-num">Section 08</div></div>
-    </div>
-    <div class="callout c-red">
-      <div class="c-dot"></div>
+  <div class="section">
+    <h2>8. Health Disclaimer</h2>
+    <div class="callout callout-red">
       <p><strong>Not a medical device.</strong> Routinic is a personal productivity and habit tracking tool. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. If you are tracking health-related habits — medication, sleep, exercise, diet, or mental wellness — always consult a qualified healthcare professional.</p>
     </div>
   </div>
 
   <!-- 9 -->
-  <div class="card" id="warranties">
-    <div class="s-head">
-      <div class="s-icon ic-amber"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></div>
-      <div><div class="s-label">Disclaimer of Warranties</div><div class="s-num">Section 09</div></div>
-    </div>
+  <div class="section">
+    <h2>9. Disclaimer of Warranties</h2>
     <p>Routinic is provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranties of any kind. We do not warrant that:</p>
-    <ul class="list">
+    <ul>
       <li>The app will be error-free, uninterrupted, or free of bugs</li>
       <li>All reminders and alarms will fire at their intended times on all devices and Android versions</li>
       <li>The app will be compatible with all current or future Android versions</li>
@@ -371,13 +333,10 @@
   </div>
 
   <!-- 10 -->
-  <div class="card" id="liability">
-    <div class="s-head">
-      <div class="s-icon ic-red"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M12 16h.01"/></svg></div>
-      <div><div class="s-label">Limitation of Liability</div><div class="s-num">Section 10</div></div>
-    </div>
+  <div class="section">
+    <h2>10. Limitation of Liability</h2>
     <p>To the maximum extent permitted by applicable law, Routinic and its developers shall not be liable for any indirect, incidental, special, consequential, or punitive damages — including loss of data, loss of profits, or loss of goodwill — arising from:</p>
-    <ul class="list">
+    <ul>
       <li>Your use of or inability to use the app</li>
       <li>Missed reminders, lost habit data, or inaccurate statistics</li>
       <li>Third-party content displayed through Google AdMob</li>
@@ -386,66 +345,68 @@
   </div>
 
   <!-- 11 -->
-  <div class="card" id="updates">
-    <div class="s-head">
-      <div class="s-icon ic-sky"><svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg></div>
-      <div><div class="s-label">App Updates</div><div class="s-num">Section 11</div></div>
-    </div>
+  <div class="section">
+    <h2>11. App Updates</h2>
     <p>We may release updates through the Google Play Store to add features, fix bugs, improve performance, or comply with changes in Android or Play Store policies. We recommend keeping Routinic updated. Some updates may change or remove existing features — significant changes will be noted in the Play Store update description.</p>
   </div>
 
   <!-- 12 -->
-  <div class="card" id="termination">
-    <div class="s-head">
-      <div class="s-icon ic-pink"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div>
-      <div><div class="s-label">Termination</div><div class="s-num">Section 12</div></div>
-    </div>
+  <div class="section">
+    <h2>12. Termination</h2>
     <p>You may stop using Routinic at any time by uninstalling it from your device. Uninstalling will permanently delete all locally stored data.</p>
     <p>We reserve the right to discontinue Routinic or restrict access at any time, with or without notice, including for legal compliance or a decision to discontinue the product.</p>
   </div>
 
   <!-- 13 -->
-  <div class="card" id="changes">
-    <div class="s-head">
-      <div class="s-icon ic-amber"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
-      <div><div class="s-label">Changes to These Terms</div><div class="s-num">Section 13</div></div>
-    </div>
-    <p>We may update these Terms from time to time as the app evolves or as required by law. When we do, we will update the date at the top of this page. For significant changes we may also note them in the Play Store update description. Continued use of Routinic after changes are posted constitutes your acceptance of the updated terms.</p>
+  <div class="section">
+    <h2>13. Changes to These Terms</h2>
+    <p>We may update these Terms from time to time as the app evolves or as required by law. When we do, we will update the date at the top of this page. Continued use of Routinic after changes are posted constitutes your acceptance of the updated terms.</p>
   </div>
 
   <!-- 14 -->
-  <div class="card" id="law">
-    <div class="s-head">
-      <div class="s-icon ic-blue"><svg viewBox="0 0 24 24"><path d="M3 6l9-4 9 4v6c0 5.25-3.75 10.14-9 11.25C6.75 22.14 3 17.25 3 12V6z"/></svg></div>
-      <div><div class="s-label">Governing Law</div><div class="s-num">Section 14</div></div>
-    </div>
+  <div class="section">
+    <h2>14. Governing Law</h2>
     <p>These Terms shall be governed by and construed in accordance with applicable laws. Any disputes arising from these terms or your use of Routinic shall be subject to the jurisdiction of the courts in the developer's country of residence, unless otherwise required by mandatory consumer protection laws in your jurisdiction.</p>
   </div>
 
   <!-- 15 -->
-  <div class="card" id="contact">
-    <div class="s-head">
-      <div class="s-icon ic-pink"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-      <div><div class="s-label">Contact</div><div class="s-num">Section 15</div></div>
-    </div>
-    <p>If you have questions or concerns about these Terms of Use, reach us through the Google Play Store listing for Routinic.</p>
+  <div class="section">
+    <h2>15. Contact</h2>
+    <p>If you have any questions about these Terms of Use, contact us at:</p>
     <div class="contact-card">
-      <div class="c-avatar">
-        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg>
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </div>
       <div>
-        <div class="c-name">Routinic</div>
-        <p class="c-sub">Use the developer contact option on the Google Play Store listing.</p>
-        <p class="c-note">A support email will be added here once available.</p>
+        <div class="contact-email"><a href="mailto:routinic.app@gmail.com">routinic.app@gmail.com</a></div>
+        <div class="contact-sub">We typically respond within 2–3 business days.</div>
       </div>
     </div>
   </div>
 
-  <div class="footer">
-    &copy; 2026 Routinic. All rights reserved. &nbsp;&middot;&nbsp;
-    <a href="privacy-policy.html">Privacy Policy</a>
-  </div>
+</div><!-- /page -->
 
-</div>
+<!-- FOOTER -->
+<footer>
+  <a href="#" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+    <svg style="width:22px;height:22px;" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="flg-tou" x1="22" y1="22" x2="86" y2="86" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#818CF8"/><stop offset="1" stop-color="#4F46E5"/>
+        </linearGradient>
+      </defs>
+      <circle cx="54" cy="54" r="32" fill="url(#flg-tou)"/>
+      <path d="M48,58L39,49C38.1,48.1 38.1,46.6 39,45.7C39.9,44.8 41.4,44.8 42.3,45.7L49.7,53.1L66.7,36.1C67.6,35.2 69.1,35.2 70,36.1C70.9,37 70.9,38.5 70,39.4L51.3,58C50.4,58.9 48.9,58.9 48,58Z" fill="#fff" fill-opacity=".55"/>
+      <path d="M48,72L39,63C38.1,62.1 38.1,60.6 39,59.7C39.9,58.8 41.4,58.8 42.3,59.7L49.7,67.1L66.7,50.1C67.6,49.2 69.1,49.2 70,50.1C70.9,51 70.9,52.5 70,53.4L51.3,72C50.4,72.9 48.9,72.9 48,72Z" fill="#fff"/>
+    </svg>
+    <span style="font-size:14px;font-weight:600;color:var(--text-muted);">Routinic</span>
+  </a>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-use.html">Terms of Use</a>
+    <a href="mailto:routinic.app@gmail.com">Contact</a>
+  </div>
+</footer>
+
 </body>
 </html>
